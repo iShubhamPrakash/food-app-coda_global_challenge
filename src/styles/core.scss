@@ -1,7 +1,5 @@
 // FONTS
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 
 // COLOR CONSTANTS
 
@@ -13,13 +11,9 @@ $ui-primary-color: #001514;
 
 $ui-secondary-color: #9c9c9c;
 
-
 // DEFAULT UI CONSTANTS
 
 $container-width: 1100px;
-
-
-
 
 // CUSTOM MIXINS
 
@@ -36,7 +30,7 @@ $container-width: 1100px;
 		rgba(0, 0, 0, 1) 65%,
 		rgba(0, 0, 0, 0) 100%
 	);
-  color: rgb(222, 222, 222);
+	color: rgb(222, 222, 222);
 }
 
 @mixin white-bg {
@@ -46,25 +40,22 @@ $container-width: 1100px;
 		rgba(255, 255, 255, 1) 65%,
 		rgba(255, 255, 255, 0) 100%
 	);
-  color: rgb(41, 40, 40);
-
+	color: rgb(41, 40, 40);
 }
-
-
 
 // BASIC STYLES RESETS
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 body {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: "Poppins", sans-serif;
 	-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: $background-gray;
+	-moz-osx-font-smoothing: grayscale;
+	background: $background-gray;
 }
 
 .text-center {
@@ -83,33 +74,71 @@ body {
 	font-weight: bold;
 }
 
-.container{
-  width: 100%;
-  max-width: $container-width;
-  margin: 0 auto;
+.container {
+	width: 100%;
+	max-width: $container-width;
+	margin: 0 auto;
 }
 
-.nofound{
-  font-family: 'Poppins', sans-serif;
-  @include center-child;
-  flex-direction: column;
-  height: 100vh;
+.nofound {
+	font-family: "Poppins", sans-serif;
+	@include center-child;
+	flex-direction: column;
+	height: 100vh;
 
-  h1{
-    font-weight: 4em;
-    color: red;
-  }
+	h1 {
+		font-weight: 4em;
+		color: red;
+	}
 
-  a{
-    text-decoration: none;
-    padding: 1em;
-    background: rgba(3, 3, 3, 0.13);
-    color: $ui-primary-color;
-    border-radius: 8px;
+	a {
+		text-decoration: none;
+		padding: 1em;
+		background: rgba(3, 3, 3, 0.13);
+		color: $ui-primary-color;
+		border-radius: 8px;
 
-    &:hover{
-      background: $ui-primary-color;
-      color: #fff;
-    }
-  }
+		&:hover {
+			background: $ui-primary-color;
+			color: #fff;
+		}
+	}
+}
+
+.custom-row {
+	//common styles
+}
+
+.custom-row-4 {
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	column-count: 4;
+}
+
+.custom-row-3 {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+}
+
+.custom-row-2 {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+}
+
+.custom-row-1 {
+	-webkit-column-count: 1;
+	-moz-column-count: 1;
+	column-count: 1;
+}
+
+.row-item {
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+	will-change: transform;
+	&:first-child {
+		transform: translateY(-0.5em);
+	}
 }
