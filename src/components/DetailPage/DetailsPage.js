@@ -8,15 +8,26 @@ import { Button } from "@material-ui/core";
 const startCount = 4;
 
 export default function DetailsPage(props) {
-	const { recipies, loading } = props;
-	let thisRecepi = {};
+  
+  const [name, setName] = useState("")
+  const [description, setDescription] = useState("")
+  const [price, setrice] = useState("")
 
-	// useEffect(() => {
-	// const id= props.match.params.id;
-	// const getrecipi = props.recipies.filter(rec=>parseInt(rec.id)=== parseInt(id))
-	// console.log(getrecipi)
-	// thisRecepi = getrecipi[0]
-	// }, [])
+
+	useEffect(() => {
+  const { recipies, loading } = props;
+
+  if(!loading){
+    const id= props.match.params.id;
+    const getrecipi = recipies.filter(rec=>parseInt(rec.id)=== parseInt(id))
+    console.log(getrecipi)
+    const thisRecepi = getrecipi[0]
+    setName(thisRecepi.name)
+    setDescription(thisRecepi.description)
+    setrice(thisRecepi.price)
+  }
+	
+	}, [])
 
 	/*
  ---------  Recipie shema:
@@ -31,10 +42,11 @@ export default function DetailsPage(props) {
 }
 */
 
-	const name = "hello world";
-	const description =
-		"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore iste deleniti unde ratione tenetur.";
-	const price = 5.5;
+	// const name = "hello world";
+	// const description =
+	// 	"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore iste deleniti unde ratione tenetur.";
+	// const price = 5.5;
+
 
 	return (
 		<div className="detailsPage">
