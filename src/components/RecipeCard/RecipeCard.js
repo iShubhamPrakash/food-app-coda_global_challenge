@@ -2,6 +2,9 @@ import React from "react";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ScheduleIcon from "@material-ui/icons/Schedule";
+import { Button } from "@material-ui/core";
+
+import {Link} from 'react-router-dom'
 
 export default function RecipeCard(props) {
 	/*
@@ -27,9 +30,17 @@ export default function RecipeCard(props) {
 		description,
 		liked = 1,
 		index,
-	} = props;
+  } = props;
+  
 	return (
 		<div className="recipeCard">
+      <div className="overlay">
+        <div className="buttonContainer">
+          <Button><Link to={`./${id}`}>View More</Link></Button>
+          <Button>Quick View</Button>
+        </div>
+      </div>
+
       <div className="recipeCard__label">{label || "default label"}</div>
 			<img className="recipeCard__image" src={image} alt={`${name}`} />
 			<div
