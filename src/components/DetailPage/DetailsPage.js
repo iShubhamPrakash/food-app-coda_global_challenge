@@ -42,12 +42,6 @@ export default function DetailsPage(props) {
 }
 */
 
-	// const name = "hello world";
-	// const description =
-	// 	"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore iste deleniti unde ratione tenetur.";
-	// const price = 5.5;
-
-
 	return (
 		<div className="detailsPage">
 			<div className="detailsPage__goBack">
