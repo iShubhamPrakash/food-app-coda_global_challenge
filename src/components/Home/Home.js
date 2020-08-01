@@ -126,7 +126,7 @@ export default function Home() {
 			</div>
 
       <div className="home__cardContainer">
-        {recipies.map(recipe=>(
+        {recipies.map((recipe,index)=>(
           <RecipeCard
             key={recipe.id}
             id={recipe.id}
@@ -136,6 +136,7 @@ export default function Home() {
             label={recipe.label}
             price={recipe.price}
             description={recipe.description}
+            index={index}
         />
         ))}
       </div>

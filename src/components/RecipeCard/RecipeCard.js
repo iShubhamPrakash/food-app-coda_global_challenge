@@ -1,6 +1,8 @@
 import React from "react";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import ScheduleIcon from "@material-ui/icons/Schedule";
+
 export default function RecipeCard(props) {
 	/*
  ---------  Recipie shema:
@@ -23,28 +25,36 @@ export default function RecipeCard(props) {
 		label,
 		price,
 		description,
-		liked = false,
+		liked = 1,
+		index,
 	} = props;
 	return (
 		<div className="recipeCard">
 			<img className="recipeCard__image" src={image} alt={`${name}`} />
-			<div className="recipeCard__content">
+			<div
+				className={`recipeCard__content ${
+					index % 2 === 0 ? "black_card" : "white_card"
+				}`}
+			>
 				<div className="header">
 					<div className="name">
 						<h2>{name}</h2>
 						<p>
 							{" "}
-							<img className="clock" src={"./clock-regular.svg"} alt="" /> 24
-							min
+							<ScheduleIcon className="clock" /> 24 min
 						</p>
 					</div>
-					<div className=	{liked ? "like liked-true" : "like liked-false"}>
-						{liked ? <FavoriteIcon /> : <FavoriteBorderIcon/>}
+					<div className={liked ? "like liked-true" : "like liked-false"}>
+						{liked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
 					</div>
 				</div>
 
 				<div className="description">
-					<p>{description}</p>
+					{/* <p>{description}</p> */}
+					<p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit unde obcaecati soluta, odio voluptatum eius!
+          </p>
+
 				</div>
 			</div>
 		</div>
