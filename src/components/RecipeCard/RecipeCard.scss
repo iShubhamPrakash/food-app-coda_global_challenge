@@ -1,0 +1,67 @@
+.recipeCard {
+	background: rgba(2, 2, 2, 0.061);
+	width: 100%;
+	max-width: 250px;
+	border-radius: 12px;
+	position: relative;
+	padding-top: 40%;
+
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		left: 0;
+		top: 0;
+		z-index: 0;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 5;
+		background: #fff;
+		padding: 1em;
+
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			color: attr("data-color");
+			.name {
+				h2 {
+					margin: 0;
+				}
+
+				p {
+					margin: 0;
+				}
+
+				.clock {
+					display: inline-block;
+					width: 1em;
+					position: relative;
+					top: 2px;
+				}
+			}
+
+			.like {
+				width: 30px;
+				height: 30px;
+        cursor: pointer;
+
+        svg{
+          width: 100%;
+          height: auto;
+        }
+      }
+      
+      .liked-true{
+        color: red;
+
+      }
+		}
+
+		.description {
+			font-size: 0.75em;
+		}
+	}
+}

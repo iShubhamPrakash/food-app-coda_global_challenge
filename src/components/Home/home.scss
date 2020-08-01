@@ -1,0 +1,32 @@
+.home{
+  padding: 1em;
+
+
+  &__header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .category{
+      text-transform: uppercase;
+      color: $ui-secondary-color;
+      margin: 0;
+    }
+
+    .categoryName{
+      margin: 0;
+      font-size: 2.2em;
+    }
+  }
+
+
+  &__cardContainer{
+    background: pink;
+    position: relative;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    // grid-auto-rows: 40px;
+
+  }
+}
