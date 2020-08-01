@@ -66,10 +66,6 @@
     }
   }
 
-
-
-
-
   &__bottomText{
     text-align: center;
     font-weight: bold;
@@ -97,6 +93,64 @@
       left: 50%;
       transform: translateX(-50%);
       padding: 0 1em;
+    }
+  }
+
+
+  // Right column
+
+  .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    .header{
+      color: gray;
+    }
+    h1{
+      margin: 0;
+      font-size: 2.4em;
+    }
+
+    .description{
+      text-align: right;
+      padding: 0;
+      margin-top: -1em;
+    }
+
+    .starts{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  .points{
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+
+    .point{
+      background: #000;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-left: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      p{
+        font-size: 1.5em;
+        margin: 0;
+      }
+      .name{
+        font-size: 13px;
+      }
     }
   }
 }

@@ -30,7 +30,7 @@ useEffect(()=>{
        </Route>
 
        <Route path="/:id">
-         <DetailsPage recipies={recipies} loading={loading}/>
+         <Route path="/:id" component={(routerParams)=><DetailsPage recipies={recipies} loading={loading} {...routerParams}/>} />
        </Route>
 
        <Route>
