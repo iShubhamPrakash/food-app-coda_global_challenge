@@ -1,0 +1,27 @@
+.search{
+  padding: 2em 0;
+  .MuiTextField-root{
+    width: 100%;
+    padding: 1em;
+
+    input{
+      font-size: 1.3em;
+    }
+
+    .MuiSvgIcon-root{
+      width: 2em;
+      height: 2em;
+      padding: 6px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0px 0px  8px rgba(48, 46, 47, 0.397);
+      cursor: pointer;
+    }
+    svg{
+      width: 80%;
+      height: 80%;
+    }
+
+  }
+
+}

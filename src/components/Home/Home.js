@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import RecipeCard from "../RecipeCard/RecipeCard";
-import { FETCH_RECIPE_API } from "../../constants/api";
 import { CircularProgress } from "@material-ui/core";
+import Search from "../Search/Search";
 
 export default function Home(props) {
 
   const {
     recipies,
-    loading
+    loading,
+    value
   } = props;
 
 
@@ -26,7 +27,7 @@ export default function Home(props) {
 
 	return (
 		<div className="home">
-			<div className="home__header">
+			<div className="home__header" style={value.length? {opacity:"0"} : null }>
 				<p className="category">Category</p>
 				<h1 className="categoryName">Pizza & Noodles</h1>
 			</div>
