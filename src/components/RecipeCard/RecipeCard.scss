@@ -8,6 +8,19 @@
   height: 400px;
   overflow: hidden;
 
+  &__label{
+    background: yellow;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0.25em 1.5em;
+    font-size: 13px;
+    border-bottom-left-radius: 12px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.671);
+  }
+
 	&__image {
 		position: absolute;
 		// width: 100%;
@@ -83,7 +96,6 @@
   }
   
   &:nth-child(even){
-    background: red;
     height: 350px;
   }
 }

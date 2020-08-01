@@ -30,6 +30,7 @@ export default function RecipeCard(props) {
 	} = props;
 	return (
 		<div className="recipeCard">
+      <div className="recipeCard__label">{label || "default label"}</div>
 			<img className="recipeCard__image" src={image} alt={`${name}`} />
 			<div
 				className={`recipeCard__content ${
