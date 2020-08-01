@@ -1,0 +1,56 @@
+.detailsPage {
+	&__goBack {
+		padding: 1em 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		color: #000;
+		cursor: pointer;
+
+		a {
+			text-decoration: none;
+			color: #000;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0.5em;
+			border-radius: 8px;
+
+			&:hover {
+				text-decoration: none;
+				background: rgba(14, 14, 14, 0.068);
+			}
+			&:active {
+				background: rgba(14, 14, 14, 0.171);
+			}
+		}
+	}
+
+	&__row {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		.col-left {
+			width: 100%;
+			background: yellowgreen;
+		}
+
+		.col-right {
+			width: 100%;
+			background: yellowgreen;
+		}
+
+		@media only screen and (min-width: 768px) {
+			.col-left {
+				width: 55%;
+				background: yellow;
+			}
+
+			.col-right {
+				width: 45%;
+				background: pink;
+			}
+		}
+	}
+}

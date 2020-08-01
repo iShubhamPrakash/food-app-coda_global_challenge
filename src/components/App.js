@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import NotFound from './NotFound';
 import Home from './Home/Home';
 import { FETCH_RECIPE_API } from "../constants/api";
+import DetailsPage from "./DetailPage/DetailsPage";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
 
 useEffect(()=>{
+  console.log("app")
   fetch(FETCH_RECIPE_API)
   .then(res=>res.json())
   .then(data=>setRecipies(data))
@@ -25,6 +27,10 @@ useEffect(()=>{
      <Switch>
        <Route exact path="/">
          <Home recipies={recipies} loading={loading}/>
+       </Route>
+
+       <Route path="/:id">
+         <DetailsPage recipies={recipies} loading={loading}/>
        </Route>
 
        <Route>
