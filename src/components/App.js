@@ -20,7 +20,7 @@ function App() {
   }, []);
   
   useEffect(() => {
-    const values = recipies.filter(recipi => recipi.name.includes(value))
+    const values = recipies.filter(recipi => recipi.name.toLowerCase().includes(value.toLowerCase()))
     setSearchResults([...values]) 
   }, [value])
 
