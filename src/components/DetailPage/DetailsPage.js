@@ -1,23 +1,24 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { Link } from "react-router-dom";
-import StarIcon from '@material-ui/icons/Star';
+import StarIcon from "@material-ui/icons/Star";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import { Button } from "@material-ui/core";
 
 const startCount = 4;
 
 export default function DetailsPage(props) {
-  const { recipies, loading } = props;
-  let thisRecepi={}
+	const { recipies, loading } = props;
+	let thisRecepi = {};
 
-  // useEffect(() => {
-    // const id= props.match.params.id;
-    // const getrecipi = props.recipies.filter(rec=>parseInt(rec.id)=== parseInt(id))
-    // console.log(getrecipi)
-    // thisRecepi = getrecipi[0]
-  // }, [])
+	// useEffect(() => {
+	// const id= props.match.params.id;
+	// const getrecipi = props.recipies.filter(rec=>parseInt(rec.id)=== parseInt(id))
+	// console.log(getrecipi)
+	// thisRecepi = getrecipi[0]
+	// }, [])
 
-
-  /*
+	/*
  ---------  Recipie shema:
 {
   "id":0,
@@ -30,9 +31,10 @@ export default function DetailsPage(props) {
 }
 */
 
-const name= "hello world";
-const description = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore iste deleniti unde ratione tenetur."
-const price = 5.5
+	const name = "hello world";
+	const description =
+		"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore iste deleniti unde ratione tenetur.";
+	const price = 5.5;
 
 	return (
 		<div className="detailsPage">
@@ -45,7 +47,7 @@ const price = 5.5
 				<div className="col col-left">
 					<div className="videoContainer">
 						<iframe
-              title="video"
+							title="video"
 							width="560"
 							height="315"
 							src="https://www.youtube.com/embed/VC4rdjT_ySI"
@@ -91,44 +93,53 @@ const price = 5.5
 					</dov>
 				</div>
 				<div className="col col-right">
-          <div className="info">
-            <p className="header">RECIPE</p>
-            <h1>{name}</h1>
-            <div className="starts">
-              <span>{`${startCount}/5`} &nbsp;</span>
-              {
-                  [1,2,3,4].map(i=><StarIcon key={i}/>)
-              }
-            </div>
+					<div className="info">
+						<p className="header">RECIPE</p>
+						<h1>{name}</h1>
+						<div className="starts">
+							<span>{`${startCount}/5`} &nbsp;</span>
+							{[1, 2, 3, 4].map((i) => (
+								<StarIcon key={i} />
+							))}
+						</div>
 
-            <p className="header">DESCRIPTION</p>
+						<p className="header">DESCRIPTION</p>
 
-            <div className="description">
-              <p>{description}</p>
-            </div>
-          </div>
+						<div className="description">
+							<p>{description}</p>
+						</div>
+					</div>
 
-            <div className="points">
-              <div className="point">
-                <p>{"8"}</p>
-                <p className="name">{"Ingredients"}</p>
-              </div>
-              <div className="point">
-                <p>{price}</p>
-                <p className="name">{"Bucks"}</p>
-              </div>
-              <div className="point">
-                <p>{"25"}</p>
-                <p className="name">{"Min"}</p>
-              </div>
-            </div>
+					<div className="points">
+						<div className="point">
+							<p>{"8"}</p>
+							<p className="name">{"Ingredients"}</p>
+						</div>
+						<div className="point">
+							<p>{price}</p>
+							<p className="name">{"Bucks"}</p>
+						</div>
+						<div className="point">
+							<p>{"25"}</p>
+							<p className="name">{"Min"}</p>
+						</div>
+					</div>
 
-        </div>
+					<div className="fav">
+						<p>FAVOURITE THIS RECIPE </p> &nbsp;<FavoriteIcon />
+					</div>
+
+          <div className="contact">
+            <p className="header">ADD COMMENTS</p>
+              <input type="textare" rows="4" placeholder="Type something here..."/>
+              <Button>Add Comment</Button>
+					</div>
+				</div>
 			</div>
 
-      <div className="detailsPage__bottomText">
-        <p>YOUR FOOD TASTES YUMMY</p>
-      </div>
+			<div className="detailsPage__bottomText">
+				<p>YOUR FOOD TASTES YUMMY</p>
+			</div>
 		</div>
 	);
 }
