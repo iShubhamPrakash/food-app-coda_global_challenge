@@ -1,3 +1,8 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+
+
 // COLOR CONSTANTS
 
 $background-gray: #f0f0f0;
@@ -9,26 +14,67 @@ $ui-primary-color: #001514;
 $ui-econdary-color: #9c9c9c;
 
 
+
+
 // CUSTOM MIXINS
 
 @mixin center-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
 
 
 // BASIC STYLES RESETS
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $background-gray;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-bod {
+	font-weight: bold;
+}
+
+
+.nofound{
+  font-family: 'Poppins', sans-serif;
+  @include center-child;
+  flex-direction: column;
+  height: 100vh;
+
+  h1{
+    font-weight: 4em;
+    color: red;
+  }
+
+  a{
+    text-decoration: none;
+    padding: 1em;
+    background: rgba(3, 3, 3, 0.13);
+    color: $ui-primary-color;
+    border-radius: 8px;
+
+    &:hover{
+      background: $ui-primary-color;
+      color: #fff;
+    }
+  }
 }

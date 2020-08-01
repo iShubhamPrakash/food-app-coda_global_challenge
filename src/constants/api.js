@@ -1,0 +1,1 @@
+export const FETCH_RECIPE_API = 'http://starlord.hackerearth.com/recipe';

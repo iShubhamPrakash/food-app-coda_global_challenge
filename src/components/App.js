@@ -1,10 +1,20 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import NotFound from './NotFound';
 
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello world</h1>
+    <div className="app">
+     <Switch>
+       <Route exact path="/">
+         hi
+       </Route>
+
+       <Route>
+         <NotFound/>
+       </Route>
+     </Switch>
     </div>
   );
 }
