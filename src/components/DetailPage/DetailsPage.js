@@ -63,6 +63,10 @@ export default function DetailsPage(props) {
 				</div>
 				<div className="col col-right">right</div>
 			</div>
+
+      <div className="detailsPage__bottomText">
+        <p>YOUR FOOD TASTES YUMMY</p>
+      </div>
 		</div>
 	);
 }
