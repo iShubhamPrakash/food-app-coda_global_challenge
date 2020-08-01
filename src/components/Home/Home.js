@@ -3,18 +3,12 @@ import RecipeCard from "../RecipeCard/RecipeCard";
 import { FETCH_RECIPE_API } from "../../constants/api";
 import { CircularProgress } from "@material-ui/core";
 
-export default function Home() {
-  const [recipies, setRecipies] = useState([]);
-	const [loading, setLoading] = useState(true);
-  
+export default function Home(props) {
 
-
-useEffect(()=>{
-  fetch(FETCH_RECIPE_API)
-  .then(res=>res.json())
-  .then(data=>setRecipies(data))
-  .then(_=>setLoading(false))
-},[])
+  const {
+    recipies,
+    loading
+  } = props;
 
 /*
  ---------  Recipie shema:
