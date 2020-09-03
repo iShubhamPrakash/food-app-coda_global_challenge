@@ -22,7 +22,12 @@ This is the frontend for a Food application. I participated in coda-global chall
 
 ![DeepinScreenshot_select-area_20200904030610](https://user-images.githubusercontent.com/28767301/92176607-6fe67e80-ee5c-11ea-8bfb-9a726daaad47.png)
 
+## Technology used
 
+1. React
+2. Scss
+3. Material UI
+4. Deployed on Firebase
 
 ## Get started locally
 
