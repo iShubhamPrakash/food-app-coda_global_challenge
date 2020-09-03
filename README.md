@@ -1,8 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Food App
 
-## Available Scripts
+This is the frontend for a Food application. I participated in coda-global challenge on Hackerearth and build this in a 6 hr contest.
+
+## App features
+
+1. Display a list of food cateories
+
+![DeepinScreenshot_select-area_20200904030516](https://user-images.githubusercontent.com/28767301/92176594-665d1680-ee5c-11ea-81d7-1bdc9810db51.png)
+
+
+2. Quick view
+![DeepinScreenshot_select-area_20200904030525](https://user-images.githubusercontent.com/28767301/92176602-6b21ca80-ee5c-11ea-80e6-6e369c0784e4.png)
+
+
+3. Detailed view
+
+![DeepinScreenshot_select-area_20200904030540](https://user-images.githubusercontent.com/28767301/92176609-7248d880-ee5c-11ea-92f6-6832462684b9.png)
+
+
+4. Search a food 
+
+![DeepinScreenshot_select-area_20200904030610](https://user-images.githubusercontent.com/28767301/92176607-6fe67e80-ee5c-11ea-8bfb-9a726daaad47.png)
+
+
+
+## Get started locally
 
 In the project directory, you can run:
+
+### `yarn install`
+
+Installs all the project dependencies.
 
 ### `yarn start`
 
@@ -12,10 +40,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
@@ -26,43 +50,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
